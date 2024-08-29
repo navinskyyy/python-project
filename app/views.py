@@ -74,7 +74,7 @@ def index(request):
 def about(request):
     return render(request, 'about.html')
 
-def searching(request):
+def booking(request):
     if request.method == "POST":
         form = BookingForm(request.POST)
         if form.is_valid():
