@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Booking Confirmation
+{% endblock %}
+
+{% block content%}
+<div class="container text-center">
+    <h1>Booking Confirmation</h1>
+    <div class="alert alert-info" role="alert">
+        Recieved Successfully..Thank you,{{ booking.p_name }}!
+
+    </div>
+    
+    <h3>Your Booking Details:</h3>
+    <ul class="list-unstyled">
+        <li><strong>Patient Name:</strong> {{ booking.p_name }}</li>
+        <li><strong>Phone Number:</strong> {{ booking.p_phone }}</li>
+        <li><strong>Email:</strong> {{ booking.p_email }}</li>
+        <li><strong>Doctor:</strong> {{ booking.doc_name }}</li>
+        <li><strong>Booking Date:</strong> {{ booking.booking_date }}</li>
+        <li><strong>Booked On:</strong> {{ booking.booked_on }}</li>
+    </ul>
+
+</div>
+{% endblock %}
